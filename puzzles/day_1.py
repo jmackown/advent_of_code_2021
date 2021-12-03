@@ -1,15 +1,4 @@
-import os
-from collections import OrderedDict
-
-
-def get_input():
-    input = OrderedDict()
-
-    with open(f"{os.path.dirname(__file__)}/input.txt") as file:
-        for i, line in enumerate(file):
-            input[i] = int(line.strip())
-
-    return input
+from get_input import get_data
 
 
 def get_basic_increase_count(data):
@@ -35,5 +24,7 @@ def get_sliding_increase(data):
     return increase_count
 
 
-print(f"puzzle 1 - {get_basic_increase_count(data=get_input())}")
-print(f"puzzle 2 - {get_sliding_increase(data=get_input())}")
+data = get_data(file_name="day_1.txt")
+
+print(f"puzzle 1 - {get_basic_increase_count(data=data)}")
+print(f"puzzle 2 - {get_sliding_increase(data=data)}")

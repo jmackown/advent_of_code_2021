@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from day_1.puzzle_1 import get_sliding_increase
+from puzzles.day_1 import get_sliding_increase
 
 test_data = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
 
